@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
+import {Accordion} from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 
-function App() {
+export const App = () => {
     return (
         <div>
+            <Accordion titleValue={"Menu"} collapsed={true}/>
+            <Accordion titleValue={"Menu"} collapsed={false}/>
+            <Accordion titleValue={"Users"} collapsed={true}/>
+            <Accordion titleValue={"Users"} collapsed={false}/>
             <PageTitle title={"This is APP component"}/>
             <PageTitle title={"My friends"}/>
             <Rating value={3}/>
-            <Accordion titleValue={"Menu"}/>
-            <Accordion titleValue={"Users"}/>
+
         </div>
     )
 }
