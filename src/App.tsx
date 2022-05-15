@@ -2,18 +2,19 @@ import React from 'react';
 import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
+import {OnOff} from "./components/OnOff/OnOff";
+import {UncontrolledAccordion} from "./components/Accordion/UncontrolledAccordion";
 
 export const App = () => {
+    console.log('App rendering')
     return (
         <div>
-            <Accordion titleValue={"Menu"} collapsed={true}/>
-            <Accordion titleValue={"Menu"} collapsed={false}/>
-            <Accordion titleValue={"Users"} collapsed={true}/>
+            <OnOff/>
+            <UncontrolledAccordion titleValue={'Menu'}/>
+            {/*<Accordion titleValue={"Menu"} collapsed={true}/>
             <Accordion titleValue={"Users"} collapsed={false}/>
             <PageTitle title={"This is APP component"}/>
-            <PageTitle title={"My friends"}/>
-            <Rating value={3}/>
-
+            <Rating value={3}/>*/}
         </div>
     )
 }
@@ -26,4 +27,4 @@ function PageTitle(props: PageTitlePropsType) {
     return <h1>{props.title}</h1>
 }
 
-export default App;
+

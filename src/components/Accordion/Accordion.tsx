@@ -37,4 +37,4 @@ function AccordionBody() {
     )
 }
 
-export default Accordion;
+
