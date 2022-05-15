@@ -15,12 +15,11 @@ export const UncontrolledAccordion = (props: UncontrolledAccordionPropsType) => 
     return (
         <>
             <div onClick={() => {
-                setCollapsed(false)
+                setCollapsed(!collapsed)
             }}>
                 <AccordionTitle title={props.titleValue}/>
                 {!collapsed && <AccordionBody/>}
             </div>
-            <button onClick={()=> {setCollapsed(true)}} className={cs.buttonCollapse}><span>COLLAPSED</span></button>
         </>
 
 
@@ -42,11 +41,11 @@ function AccordionTitle(props: AccordionTitlePropsType) {
 function AccordionBody() {
     return (
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
+            <li>Драники</li>
+            <li>Борщ</li>
+            <li>Креветки Белоруские</li>
+            <li>Компот</li>
+            <li>Квас</li>
         </ul>
     )
 }
