@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import cs from './Accordion.module.css'
+import cs from '../Accordion/Accordion.module.css'
 
 
 type UncontrolledAccordionPropsType = {

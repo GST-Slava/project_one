@@ -1,5 +1,5 @@
 import React from "react";
-import cs from './UncontrolledRating.module.css'
+import cs from '../UncontrolledRating/UncontrolledRating.module.css'
 
 export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5;
 
