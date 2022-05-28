@@ -3,11 +3,12 @@ import cs from './UncontrolledOnOff.module.css';
 
 type PropsType = {
     onChange: (on: boolean) => void
+    defaultOn?: boolean
 }
 export const UncontrolledOnOff = (props: PropsType) => {
     console.log('UncontrolledOnOff rendering');
 
-    let [on, setOn] = useState(false)
+    let [on, setOn] = useState(props.defaultOn ? props.defaultOn : false)
 
     const onStyle = {
         backgroundColor: on ? 'lime' : 'silver'
