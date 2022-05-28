@@ -2,32 +2,30 @@ import React, {useState} from "react";
 import cs from './OnOff.module.css';
 
 type PropsType = {
-    // on: boolean
+    on: boolean
+    onChange: (on: boolean) => void
 }
-
 export const OnOff = (props: PropsType) => {
-    console.log('OnOff rendering');
+    console.log('On: ' + props.on);
 
-    let [on, setOn] = useState(false)
 
     const onStyle = {
-        backgroundColor: on ? 'silver' : 'lime'
+        backgroundColor: props.on ? 'lime' : 'silver'
     };
     const offStyle = {
-        backgroundColor: on ? 'silver' : 'red'
+        backgroundColor: props.on ? 'silver' : 'red'
     };
     const indicatorStyle = {
-        backgroundColor: on ? 'lime' : 'red'
+        backgroundColor: props.on ? 'lime' : 'red'
     };
-
     return (
         <div>
             <div className={cs.onStyle} style={onStyle} onClick={() => {
-                setOn(true)
+                props.onChange(true)
             }}>On
             </div>
             <div className={cs.offStyle} style={offStyle} onClick={() => {
-                setOn(false)
+                props.onChange(false)
             }}>Off
             </div>
             <div className={cs.indicator} style={indicatorStyle}></div>

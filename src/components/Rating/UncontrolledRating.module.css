@@ -1,0 +1,22 @@
+.rating {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 40px;
+    line-height: 0.75;
+    color: gray;
+}
+
+.ratingActive {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 40px;
+    line-height: 0.75;
+    color: gold;
+    overflow: hidden;
+}
+
+
+
+
+
+

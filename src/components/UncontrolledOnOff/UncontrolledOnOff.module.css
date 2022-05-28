@@ -1,0 +1,26 @@
+.onStyle {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border: 2px solid black;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+.offStyle {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border: 2px solid black;
+    margin-left: 2px;
+    padding: 2px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 5px;
+}
