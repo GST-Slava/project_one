@@ -6,6 +6,7 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion/Uncontro
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import {Accordion} from './components/Accordion/Accordion';
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import {onClickCallback} from "./components/Accordion/Accordion.stories";
 
 export const App = () => {
     console.log('App rendering')
@@ -20,14 +21,13 @@ export const App = () => {
         <div className={'App'}>
             <OnOff on={switchOn} onChange={setSwitchOn}/>
             <UncontrolledOnOff onChange={setSwitchOn}/>{switchOn.toString()}
-
             <UncontrolledAccordion titleValue={'Menu'}/>
-            <UncontrolledRating/>
+            <UncontrolledRating defaultValue={0} onChange={value => 0}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
-
-            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onChange={() => {
-                setAccordionCollapsed(!accordionCollapsed)
-            }}/>
+            <Accordion items={[]} onClick={onClickCallback} titleValue={"Menu"} collapsed={accordionCollapsed}
+                       onChange={() => {
+                           setAccordionCollapsed(!accordionCollapsed)
+                       }}/>
 
             {/*<PageTitle title={"This is APP component"}/>
             <Rating value={3}/>*/}

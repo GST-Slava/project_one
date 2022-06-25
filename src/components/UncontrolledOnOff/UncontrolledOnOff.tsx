@@ -33,7 +33,7 @@ export const UncontrolledOnOff = (props: PropsType) => {
         <div>
             <div className={cs.onStyle} style={onStyle} onClick={onClicked}>On</div>
             <div className={cs.offStyle} style={offStyle} onClick={offClicked}>Off</div>
-            <div className={cs.indicator} style={indicatorStyle}></div>
+            <div  style={indicatorStyle}></div>
         </div>
     )
 }
