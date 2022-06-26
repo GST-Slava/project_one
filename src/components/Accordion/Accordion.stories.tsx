@@ -37,8 +37,20 @@ UsersUnCollapsedMode.args = {
         {title: 'Anna', value: 9}],
 }
 
-export const ModeChanging = () => {
+export const ModeChanging: Story<AccordionPropsType> = (args) => {
     const [value, setValue] = useState<boolean>(true)
-    return <Accordion items={[]} onClick={onClickCallback} titleValue={'Menu'} collapsed={value}
-                      onChange={() => setValue(!value)}/>
+
+    return <Accordion {...args} collapsed={value} onChange={() => setValue(!value)}/>
+}
+ModeChanging.args = {
+    titleValue: 'Users',
+    items: [
+        {title: 'Dimich', value: 1},
+        {title: 'Andrey', value: 3},
+        {title: 'Viktor', value: 5},
+        {title: 'Anna', value: 9},
+    ],
+    onClick: (value) => {
+        alert(`users with ID ${value} should be happy`)
+    }
 }

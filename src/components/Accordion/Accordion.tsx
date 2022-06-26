@@ -9,15 +9,26 @@ export type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
     onChange: () => void
+    /**
+     * This comment writing in to storybook
+     */
     items: ItemType[]
+    /**
+     * Callback that is called when any item clicked
+     * @param value
+     */
     onClick: (value: any) => void
+    /**
+     * optional color on header text
+     */
+    color?: string
 }
 
 export const Accordion = (props: AccordionPropsType) => {
     console.log('Accordion rendering')
     return (
         <div>
-            <AccordionTitle title={props.titleValue} onChange={props.onChange}/>
+            <AccordionTitle title={props.titleValue} color={props.color} onChange={props.onChange}/>
             {!props.collapsed && <AccordionBody/>}
         </div>
     )
@@ -26,11 +37,14 @@ export const Accordion = (props: AccordionPropsType) => {
 type AccordionTitlePropsType = {
     title: string
     onChange: () => void
+    color?: string
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     return (
-        <h2 onClick={(e) => props.onChange()}>-=-{props.title}-=-</h2>
+        <h2
+            style={{color: props.color ? props.color : 'black'}}
+            onClick={(e) => props.onChange()}>-=-{props.title}-=-</h2>
     )
 }
 
