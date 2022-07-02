@@ -23,7 +23,7 @@ export const TrackValueOfUncontrolledInputByButtonPress = () => {
     }
     return <><input ref={inputRef}/>
         <button onClick={save}>safe</button>
-        - actual value: {value} </>;
+        - actual value here: {value} </>;
 }
 
 export const ControlledInputWithFixedValue = () => <input value={'it-incubator.by'}/>
