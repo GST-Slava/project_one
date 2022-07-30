@@ -7,6 +7,9 @@ import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRa
 import {Accordion} from './components/Accordion/Accordion';
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {onClickCallback} from "./components/Accordion/Accordion.stories";
+import {Select} from "./components/Select/Select";
+import {any} from "prop-types";
+
 
 export const App = () => {
     console.log('App rendering')
@@ -28,6 +31,7 @@ export const App = () => {
                        onChange={() => {
                            setAccordionCollapsed(!accordionCollapsed)
                        }}/>
+            <Select onChange={value => any} items={[]}/>
 
             {/*<PageTitle title={"This is APP component"}/>
             <Rating value={3}/>*/}
