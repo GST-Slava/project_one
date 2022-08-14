@@ -13,9 +13,9 @@ type NewMessageCounterType = {
 
 const UsersSecret = (props: UsersSecretType) => {
     console.log('USERS')
-    return <div>
-        {props.users.map((u, i) => <div key={i}>{u}</div>)}
-    </div>
+    return <div>{
+        props.users.map((u, i) => <div key={i}>{u}</div>)
+    }</div>
 }
 
 const NewMessageCounter = (props: NewMessageCounterType) => {
@@ -31,8 +31,10 @@ export const Example1 = () => {
 
     const addUser = () => {
         const newUsers = [...users, 'Sveta' + new Date().getTime()];
-        setUsers(newUsers)
+        setUsers(newUsers);
     }
+
+    users.push('Sveta ' + new Date().getTime());
 
     return <>
         <button onClick={() => setCounter(counter + 1)}>+</button>
