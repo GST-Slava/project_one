@@ -40,3 +40,51 @@ export const SimpleExample = () => {
         <button onClick={() => setCounter(counter + 1)}>Counter</button>
     </>
 }
+
+export const SetTimeoutExample = () => {
+    const [fake, setFake] = useState(1)
+    const [counter, setCounter] = useState(1)
+
+    console.log('SetTimeoutExample');
+
+    useEffect(() => {
+        setInterval(() => {
+            console.log('tick: ' + counter)
+            setCounter(state => state + 1)
+        }, 1000)
+    }, [])
+
+
+    return <>
+        This,counter: {counter} - fake: {fake}
+
+    </>
+
+
+    /*return <>
+        This {counter} {fake}
+        <button onClick={() => setFake(fake + 1)}>Fake</button>
+        <button onClick={() => setCounter(counter + 1)}>Counter</button>
+    </>
+    //вариант со счетчиком*/
+}
+
+export const ClockExample = () => {
+
+    const [date, setDate] = useState(new Date())
+    const refreshClock = () => {
+        setDate(new Date())
+    }
+    console.log('ClockExample');
+
+    useEffect(() => {
+        const timerId = setInterval(refreshClock, 1000);
+        return function cleanup() {
+            clearInterval(timerId)
+        };
+    }, [])
+
+    return <>
+        Time: {date.toLocaleTimeString()}
+    </>
+}
