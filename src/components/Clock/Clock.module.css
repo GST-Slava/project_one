@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh;*/
+    width: 500px;
+    height: 700px;
+    background: #2f363e;
+}
+
+.container {
+    position: relative;
+    background: #2f363e;
+    /*min-height: 500px;*/
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    5px 5px 10px rgba(0, 0, 0, 0.5),
+    5px 5px 20px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clock {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: #2f363e;
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+    5px 5px 10px rgba(0, 0, 0, 0.5),
+    5px 5px 20px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #2f363e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 100000;
+}
+
+.clock span {
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    /*transform: rotate(calc(30deg * var(--i)));*/
+}
+
+.clock span.number1 {
+    transform: rotate(30deg);
+}
+
+.clock span.number2 {
+    transform: rotate(60deg);
+}
+
+.clock span.number3 {
+    transform: rotate(90deg);
+}
+
+.clock span.number4 {
+    transform: rotate(120deg);
+}
+
+.clock span.number5 {
+    transform: rotate(150deg);
+}
+
+.clock span.number6 {
+    transform: rotate(180deg);
+}
+
+.clock span.number7 {
+    transform: rotate(210deg);
+}
+
+.clock span.number8 {
+    transform: rotate(240deg);
+}
+
+.clock span.number9 {
+    transform: rotate(270deg);
+}
+
+.clock span.number10 {
+    transform: rotate(300deg);
+}
+
+.clock span.number11 {
+    transform: rotate(330deg);
+}
+
+.clock span.number12 {
+    transform: rotate(360deg);
+}
+
+.clock span b {
+    font-size: 2em;
+    opacity: 0.25;
+}
+
+.circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #1c1a1a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.circle i {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: #52f800;
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle1:nth-child(1) {
+    width: 2px;
+}
+
+.circle2 {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border: 2px solid #1c1a1a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.circle2 i {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: yellow;
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle2:nth-child(1) {
+    width: 6px;
+}
+
+.circle3 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 2px solid #1c1a1a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.circle3 i {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: red;
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle3:nth-child(1) {
+    width: 9px;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #52f800;
+    box-shadow: 0 0 20px #52f800,
+    0 0 60px;
+}
+
+.circle2::before {
+    content: '';
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: yellow;
+    box-shadow: 0 0 20px yellow,
+    0 0 60px;
+}
+
+.circle3::before {
+    content: '';
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: red;
+    box-shadow: 0 0 20px red,
+    0 0 60px;
+}
+
+.digitalClock {
+    margin-bottom: 40px;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 2em;
+    border: 2px solid #1c1a1a;
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+    5px 5px 20px rgba(255, 255, 255, 0.2),
+    -5px -5px 15px rgba(0, 0, 0, 0.75);
+    background: linear-gradient(90deg, rgba(59, 255, 232, 1) 0%, rgba(39, 186, 232, 1) 24%, rgba(28, 149, 232, 1) 37%, rgba(21, 176, 205, 1) 53%, rgba(14, 201, 179, 1) 68%, rgba(10, 218, 162, 1) 78%, rgba(0, 255, 124, 1) 100%);
+}

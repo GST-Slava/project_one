@@ -9,6 +9,7 @@ import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOf
 import {onClickCallback} from "./components/Accordion/Accordion.stories";
 import {Select} from "./components/Select/Select";
 import {any} from "prop-types";
+import {Clock} from "./components/Clock/Clock";
 
 
 export const App = () => {
@@ -32,6 +33,8 @@ export const App = () => {
                            setAccordionCollapsed(!accordionCollapsed)
                        }}/>
             <Select onChange={value => any} items={[]}/>
+
+            <Clock/>
 
             {/*<PageTitle title={"This is APP component"}/>
             <Rating value={3}/>*/}
