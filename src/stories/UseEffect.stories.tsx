@@ -68,23 +68,3 @@ export const SetTimeoutExample = () => {
     </>
     //вариант со счетчиком*/
 }
-
-export const ClockExample = () => {
-
-    const [date, setDate] = useState(new Date())
-    const refreshClock = () => {
-        setDate(new Date())
-    }
-    console.log('ClockExample');
-
-    useEffect(() => {
-        const timerId = setInterval(refreshClock, 1000);
-        return function cleanup() {
-            clearInterval(timerId)
-        };
-    }, [])
-
-    return <>
-        Time: {date.toLocaleTimeString()}
-    </>
-}

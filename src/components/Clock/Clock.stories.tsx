@@ -1,12 +1,15 @@
 import React from "react";
-import {Clock} from "./Clock";
-import {ClockExample} from "../../stories/UseEffect.stories";
+import {ClockOptions} from "./ClockOptions";
 
 export default {
-    title: 'Clock',
-    component: Clock,
+    title: 'Clock Digital and Analog',
+    component: ClockOptions,
 }
 
 export const BaseDigitalExample = () => {
-    return <ClockExample />
+    return <ClockOptions mode={'digital'}/>
+};
+
+export const BaseAnalogExample = () => {
+    return <ClockOptions mode={'analog'}/>
 };
